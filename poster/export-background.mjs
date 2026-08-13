@@ -4,7 +4,7 @@ import { pathToFileURL, fileURLToPath } from "node:url";
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
 const html = pathToFileURL(path.join(dir, "background.html")).href;
-const out = path.join(dir, "background-1080x1350.png");
+const out = path.join(dir, "background-793x869.png");
 
 const browser = await chromium.launch({
   channel: "chrome",
@@ -12,7 +12,7 @@ const browser = await chromium.launch({
 });
 
 const page = await browser.newPage({
-  viewport: { width: 1080, height: 1350 },
+  viewport: { width: 793, height: 869 },
   deviceScaleFactor: 1,
 });
 
