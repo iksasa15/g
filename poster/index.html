@@ -67,32 +67,43 @@
     }
 
     .art-flower {
-      top: -120px;
-      left: -180px;
-      width: 520px;
-      height: 520px;
-      opacity: 0.55;
+      top: -140px;
+      left: -160px;
+      width: 680px;
+      height: 680px;
+      opacity: 0.72;
       animation: floatA 10s ease-in-out infinite;
     }
 
     .art-left {
-      display: none;
+      top: 420px;
+      left: -140px;
+      width: 340px;
+      height: 480px;
+      opacity: 0.7;
+      animation: floatA 11s ease-in-out infinite reverse;
     }
 
     .art-bottom {
-      bottom: -160px;
-      left: -80px;
-      width: 480px;
-      height: 360px;
-      opacity: 0.5;
+      bottom: -140px;
+      left: -60px;
+      width: 640px;
+      height: 440px;
+      opacity: 0.68;
       animation: floatA 12s ease-in-out infinite reverse;
     }
 
     .content {
       position: relative;
       z-index: 2;
-      padding: 48px 72px 40px;
+      padding: 44px 64px 36px;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .main {
       display: flex;
       flex-direction: column;
     }
@@ -101,8 +112,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-bottom: 18px;
-      margin-bottom: 28px;
+      padding-bottom: 16px;
+      margin-bottom: 22px;
       border-bottom: 1.5px solid #D9C6EF;
       animation: rise 0.6s ease both;
     }
@@ -147,10 +158,14 @@
 
     h1 {
       font-weight: 900;
-      font-size: 52px;
-      line-height: 1.22;
-      margin-bottom: 22px;
+      font-size: 54px;
+      line-height: 1.2;
+      margin-bottom: 20px;
       animation: rise 0.7s ease 0.1s both;
+    }
+
+    h1 span {
+      display: block;
     }
 
     .intro {
@@ -158,8 +173,8 @@
       font-weight: 400;
       line-height: 1.8;
       color: #3A2454;
-      margin-bottom: 28px;
-      padding: 20px 24px;
+      margin-bottom: 22px;
+      padding: 14px 20px;
       background: #FFFFFF;
       border: 1.5px solid #D9C6EF;
       border-radius: 16px;
@@ -184,33 +199,35 @@
     }
 
     .cards {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 14px;
     }
 
     .card {
       display: flex;
+      flex-direction: row;
       align-items: center;
-      gap: 16px;
-      flex: 1;
-      min-height: 88px;
-      padding: 14px 18px;
+      gap: 12px;
+      padding: 12px 14px;
       background: #FFFFFF;
       border: 1.5px solid #D9C6EF;
       border-radius: 14px;
       animation: rise 0.65s ease both;
     }
 
+    .card:last-child {
+      grid-column: 1 / -1;
+    }
+
     .card:nth-child(1) { animation-delay: 0.24s; }
-    .card:nth-child(2) { animation-delay: 0.3s; }
-    .card:nth-child(3) { animation-delay: 0.36s; }
-    .card:nth-child(4) { animation-delay: 0.42s; }
-    .card:nth-child(5) { animation-delay: 0.48s; }
+    .card:nth-child(2) { animation-delay: 0.28s; }
+    .card:nth-child(3) { animation-delay: 0.32s; }
+    .card:nth-child(4) { animation-delay: 0.36s; }
+    .card:nth-child(5) { animation-delay: 0.4s; }
 
     .num {
-      flex: 0 0 36px;
+      flex: 0 0 auto;
       font-size: 15px;
       font-weight: 700;
       color: #C4A35A;
@@ -218,10 +235,10 @@
     }
 
     .icon {
-      flex: 0 0 48px;
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
+      flex: 0 0 36px;
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
       background: #EDE3F7;
       color: #6B4C9A;
       display: flex;
@@ -230,15 +247,15 @@
     }
 
     .icon svg {
-      width: 24px;
-      height: 24px;
+      width: 18px;
+      height: 18px;
     }
 
     .card p {
       flex: 1;
-      font-size: 19px;
+      font-size: 17px;
       font-weight: 500;
-      line-height: 1.55;
+      line-height: 1.5;
       color: #3A2454;
     }
 
@@ -246,7 +263,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 22px;
       padding-top: 16px;
       border-top: 1.5px solid #D9C6EF;
       font-size: 16px;
@@ -353,85 +369,87 @@
     </svg>
 
     <div class="content">
-      <header class="header">
-        <div class="logo-pill">
-          <img src="logo.svg" alt="جامعة تبوك" />
+      <div class="main">
+        <header class="header">
+          <div class="logo-pill">
+            <img src="logo.svg" alt="جامعة تبوك" />
+          </div>
+          <div class="header-text">
+            <strong>جامعة تبوك</strong>
+            <span>University of Tabuk</span>
+          </div>
+        </header>
+
+        <p class="kicker">امتيازات الطالب المتميز</p>
+        <h1>تمَيُّزك...<span>له امتيازات</span></h1>
+
+        <p class="intro">
+          لأن التميز يستحق التقدير .. يحصل الطالب المتميز في جامعة تبوك على مجموعة من الامتيازات والفرص التي تدعم تطوره الأكاديمي والشخصي، وتمنحه تجربة جامعية أكثر إثراءً.
+        </p>
+
+        <div class="section-label">الامتيازات</div>
+        <div class="cards">
+          <article class="card">
+            <span class="num">01</span>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="5" />
+                <path d="M8.5 12.5 7 21l5-2.2L17 21l-1.5-8.5" />
+              </svg>
+            </div>
+            <p>دعم الطلاب المميزين في المسابقات والترشيحات النهائية.</p>
+          </article>
+
+          <article class="card">
+            <span class="num">02</span>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18h6" />
+                <path d="M10 21h4" />
+                <path d="M12 3a6 6 0 0 0-3.5 10.8c.9.7 1.5 1.7 1.5 2.7h4c0-1 .6-2 1.5-2.7A6 6 0 0 0 12 3Z" />
+              </svg>
+            </div>
+            <p>حاضنة ابتكار لتمويل مشاريع وأبحاث طلابنا المميزين.</p>
+          </article>
+
+          <article class="card">
+            <span class="num">03</span>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 7h10v11H7z" />
+                <path d="M9 7V5.8A2.8 2.8 0 0 1 12 3a2.8 2.8 0 0 1 3 2.8V7" />
+                <path d="M9.5 12h5M9.5 15.5h3.5" />
+              </svg>
+            </div>
+            <p>دعم طلابنا المميزين في شهادات احترافية من مركز محترف.</p>
+          </article>
+
+          <article class="card">
+            <span class="num">04</span>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18" />
+                <path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z" />
+              </svg>
+            </div>
+            <p>دعم الطلاب المميزين في المشاركات الخارجية وتمثيل الجامعة.</p>
+          </article>
+
+          <article class="card">
+            <span class="num">05</span>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 4h10v4a5 5 0 0 1-10 0V4Z" />
+                <path d="M12 13v3" />
+                <path d="M8 20h8" />
+                <path d="M6 8H4a3 3 0 0 0 3 3" />
+                <path d="M18 8h2a3 3 0 0 1-3 3" />
+              </svg>
+            </div>
+            <p>البطولات والمنافسات الرياضية الجامعية والإلكترونية في الاتحاد السعودي للرياضة الجامعية.</p>
+          </article>
         </div>
-        <div class="header-text">
-          <strong>جامعة تبوك</strong>
-          <span>University of Tabuk</span>
-        </div>
-      </header>
-
-      <p class="kicker">امتيازات الطالب المتميز</p>
-      <h1>تمَيُّزك... له امتيازات</h1>
-
-      <p class="intro">
-        لأن التميز يستحق التقدير .. يحصل الطالب المتميز في جامعة تبوك على مجموعة من الامتيازات والفرص التي تدعم تطوره الأكاديمي والشخصي، وتمنحه تجربة جامعية أكثر إثراءً.
-      </p>
-
-      <div class="section-label">الامتيازات</div>
-      <div class="cards">
-        <article class="card">
-          <span class="num">01</span>
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="8" r="5" />
-              <path d="M8.5 12.5 7 21l5-2.2L17 21l-1.5-8.5" />
-            </svg>
-          </div>
-          <p>دعم الطلاب المميزين في المسابقات والترشيحات النهائية.</p>
-        </article>
-
-        <article class="card">
-          <span class="num">02</span>
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 18h6" />
-              <path d="M10 21h4" />
-              <path d="M12 3a6 6 0 0 0-3.5 10.8c.9.7 1.5 1.7 1.5 2.7h4c0-1 .6-2 1.5-2.7A6 6 0 0 0 12 3Z" />
-            </svg>
-          </div>
-          <p>حاضنة ابتكار لتمويل مشاريع وأبحاث طلابنا المميزين.</p>
-        </article>
-
-        <article class="card">
-          <span class="num">03</span>
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M7 7h10v11H7z" />
-              <path d="M9 7V5.8A2.8 2.8 0 0 1 12 3a2.8 2.8 0 0 1 3 2.8V7" />
-              <path d="M9.5 12h5M9.5 15.5h3.5" />
-            </svg>
-          </div>
-          <p>دعم طلابنا المميزين في شهادات احترافية من مركز محترف.</p>
-        </article>
-
-        <article class="card">
-          <span class="num">04</span>
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="9" />
-              <path d="M3 12h18" />
-              <path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z" />
-            </svg>
-          </div>
-          <p>دعم الطلاب المميزين في المشاركات الخارجية وتمثيل الجامعة.</p>
-        </article>
-
-        <article class="card">
-          <span class="num">05</span>
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M7 4h10v4a5 5 0 0 1-10 0V4Z" />
-              <path d="M12 13v3" />
-              <path d="M8 20h8" />
-              <path d="M6 8H4a3 3 0 0 0 3 3" />
-              <path d="M18 8h2a3 3 0 0 1-3 3" />
-            </svg>
-          </div>
-          <p>البطولات والمنافسات الرياضية الجامعية والإلكترونية في الاتحاد السعودي للرياضة الجامعية.</p>
-        </article>
       </div>
 
       <footer class="footer">
