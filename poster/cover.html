@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080" />
+  <title>بوصلة UT — الطبعة الأولى</title>
+  <style>
+    @font-face {
+      font-family: "Thmanyah Sans";
+      src: url("../fonts/thmanyahsans-Light.otf") format("opentype");
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Thmanyah Sans";
+      src: url("../fonts/thmanyahsans-Regular.otf") format("opentype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Thmanyah Sans";
+      src: url("../fonts/thmanyahsans-Medium.otf") format("opentype");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Thmanyah Sans";
+      src: url("../fonts/thmanyahsans-Bold.otf") format("opentype");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Thmanyah Sans";
+      src: url("../fonts/thmanyahsans-Black.otf") format("opentype");
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .poster {
+      position: relative;
+      width: 1080px;
+      height: 1350px;
+      background: #F6F0FA;
+      color: #3A2454;
+      font-family: "Thmanyah Sans", sans-serif;
+      overflow: hidden;
+    }
+
+    .art { position: absolute; pointer-events: none; z-index: 1; }
+
+    .art-flower {
+      top: -140px;
+      left: -160px;
+      width: 680px;
+      height: 680px;
+      opacity: 0.75;
+    }
+
+    .art-left {
+      top: 420px;
+      left: -140px;
+      width: 340px;
+      height: 480px;
+      opacity: 0.7;
+    }
+
+    .art-bottom {
+      bottom: -140px;
+      left: -60px;
+      width: 640px;
+      height: 440px;
+      opacity: 0.7;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: 48px 64px 40px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      border-bottom: 1.5px solid #D9C6EF;
+    }
+
+    .logo-pill {
+      background: #fff;
+      border: 1px solid #D9C6EF;
+      border-radius: 10px;
+      padding: 8px 12px;
+    }
+
+    .logo-pill img { height: 40px; display: block; }
+
+    .header-text { text-align: left; }
+    .header-text strong { display: block; font-size: 20px; font-weight: 700; }
+    .header-text span {
+      display: block;
+      margin-top: 2px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #6B4C9A;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 22px;
+    }
+
+    .edition {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 22px;
+      background: #FFFFFF;
+      border: 1.5px solid #C4A35A;
+      border-radius: 999px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #8A6B24;
+    }
+
+    .compass {
+      width: 280px;
+      height: 280px;
+    }
+
+    h1 {
+      font-weight: 900;
+      font-size: 96px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: #6B4C9A;
+      font-size: 64px;
+      display: block;
+      margin-top: 4px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+    }
+
+    .date {
+      font-size: 28px;
+      font-weight: 700;
+      color: #6B4C9A;
+    }
+
+    .rule {
+      width: 120px;
+      height: 3px;
+      background: #C4A35A;
+      border-radius: 2px;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1.5px solid #D9C6EF;
+      font-size: 16px;
+      font-weight: 700;
+      color: #6B4C9A;
+    }
+  </style>
+</head>
+<body>
+  <article class="poster" id="poster">
+    <svg class="art art-flower" viewBox="0 0 780 780" aria-hidden="true">
+      <circle cx="300" cy="300" r="240" fill="#E8D9F5" />
+      <g fill="#D4B8EC">
+        <ellipse cx="300" cy="70" rx="48" ry="118" />
+        <ellipse cx="300" cy="70" rx="48" ry="118" transform="rotate(22.5 300 300)" />
+        <ellipse cx="300" cy="70" rx="48" ry="118" transform="rotate(45 300 300)" />
+        <ellipse cx="300" cy="70" rx="48" ry="118" transform="rotate(67.5 300 300)" />
+        <ellipse cx="300" cy="70" rx="48" ry="118" transform="rotate(90 300 300)" />
+        <ellipse cx="300" cy="70" rx="48" ry="118" transform="rotate(112.5 300 300)" />
+        <ellipse cx="300" cy="70" rx="48" ry="118" transform="rotate(135 300 300)" />
+        <ellipse cx="300" cy="70" rx="48" ry="118" transform="rotate(157.5 300 300)" />
+        <ellipse cx="300" cy="70" rx="48" ry="118" transform="rotate(180 300 300)" />
+        <ellipse cx="300" cy="70" rx="48" ry="118" transform="rotate(202.5 300 300)" />
+        <ellipse cx="300" cy="70" rx="48" ry="118" transform="rotate(225 300 300)" />
+        <ellipse cx="300" cy="70" rx="48" ry="118" transform="rotate(247.5 300 300)" />
+        <ellipse cx="300" cy="70" rx="48" ry="118" transform="rotate(270 300 300)" />
+        <ellipse cx="300" cy="70" rx="48" ry="118" transform="rotate(292.5 300 300)" />
+        <ellipse cx="300" cy="70" rx="48" ry="118" transform="rotate(315 300 300)" />
+        <ellipse cx="300" cy="70" rx="48" ry="118" transform="rotate(337.5 300 300)" />
+      </g>
+      <g fill="#B7D39A">
+        <ellipse cx="300" cy="128" rx="28" ry="72" transform="rotate(11 300 300)" />
+        <ellipse cx="300" cy="128" rx="28" ry="72" transform="rotate(56 300 300)" />
+        <ellipse cx="300" cy="128" rx="28" ry="72" transform="rotate(101 300 300)" />
+        <ellipse cx="300" cy="128" rx="28" ry="72" transform="rotate(146 300 300)" />
+        <ellipse cx="300" cy="128" rx="28" ry="72" transform="rotate(191 300 300)" />
+        <ellipse cx="300" cy="128" rx="28" ry="72" transform="rotate(236 300 300)" />
+        <ellipse cx="300" cy="128" rx="28" ry="72" transform="rotate(281 300 300)" />
+        <ellipse cx="300" cy="128" rx="28" ry="72" transform="rotate(326 300 300)" />
+      </g>
+      <circle cx="300" cy="300" r="78" fill="#f3eadc" />
+      <circle cx="300" cy="300" r="40" fill="#d4b56e" />
+    </svg>
+
+    <svg class="art art-left" viewBox="0 0 360 520" aria-hidden="true">
+      <path d="M40 30 C160 -30 280 40 330 140 C250 70 140 90 40 30Z" fill="#B7D39A" />
+      <path d="M-20 110 C110 30 230 80 290 190 C200 120 90 160 -20 110Z" fill="#D4B8EC" />
+      <path d="M-40 210 C90 130 200 180 250 290 C160 220 50 260 -40 210Z" fill="#EDE3F7" />
+      <path d="M10 300 C130 230 210 280 240 380 C150 320 50 350 10 300Z" fill="#C5DFA8" />
+      <path d="M-10 390 C100 340 170 390 190 470 C110 420 30 450 -10 390Z" fill="#DCC8EE" />
+    </svg>
+
+    <svg class="art art-bottom" viewBox="0 0 720 520" aria-hidden="true">
+      <path d="M40 360 C10 180 160 70 320 80 C250 180 280 300 360 400 C180 380 80 430 40 360Z" fill="#B7D39A" />
+      <path d="M160 450 C110 250 280 110 450 130 C380 250 440 350 530 450 C340 430 210 500 160 450Z" fill="#D4B8EC" />
+      <path d="M330 500 C300 330 460 210 620 230 C560 340 610 430 680 510 C500 490 380 530 330 500Z" fill="#E0C8F0" />
+    </svg>
+
+    <div class="content">
+      <header class="header">
+        <div class="logo-pill">
+          <img src="logo.svg" alt="جامعة تبوك" />
+        </div>
+        <div class="header-text">
+          <strong>جامعة تبوك</strong>
+          <span>University of Tabuk</span>
+        </div>
+      </header>
+
+      <div class="hero">
+        <div class="edition">الطبعة الأولى</div>
+
+        <svg class="compass" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="92" fill="#FFFFFF" stroke="#D9C6EF" stroke-width="3" />
+          <circle cx="100" cy="100" r="78" fill="none" stroke="#EDE3F7" stroke-width="2" />
+          <circle cx="100" cy="100" r="58" fill="none" stroke="#D9C6EF" stroke-width="1.5" />
+          <g fill="#C4A35A">
+            <polygon points="100,18 106,52 100,46 94,52" />
+            <polygon points="100,182 106,148 100,154 94,148" />
+            <polygon points="18,100 52,94 46,100 52,106" />
+            <polygon points="182,100 148,94 154,100 148,106" />
+          </g>
+          <polygon points="100,38 112,100 100,92 88,100" fill="#6B4C9A" />
+          <polygon points="100,162 112,100 100,108 88,100" fill="#C4A35A" />
+          <circle cx="100" cy="100" r="10" fill="#FFFFFF" stroke="#6B4C9A" stroke-width="3" />
+          <circle cx="100" cy="100" r="4" fill="#C4A35A" />
+        </svg>
+
+        <h1>بوصلة<em>UT</em></h1>
+        <div class="rule"></div>
+        <p class="date">Aug. 23, 2026</p>
+      </div>
+
+      <footer class="footer">
+        <span>جامعة تبوك</span>
+        <span>University of Tabuk</span>
+      </footer>
+    </div>
+  </article>
+</body>
+</html>
