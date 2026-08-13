@@ -125,14 +125,17 @@
       grid-template-columns: 1fr 1fr 1fr;
       gap: 12px;
       flex: 1;
-      align-content: start;
     }
 
     .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       background: #fff;
       border: 1.5px solid #D9C6EF;
       border-radius: 16px;
-      padding: 16px 12px 14px;
+      padding: 14px 12px;
       text-align: center;
       animation: rise 0.65s ease both;
     }
