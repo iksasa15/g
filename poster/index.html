@@ -67,88 +67,126 @@
     }
 
     .art-flower {
-      top: -160px;
-      left: -170px;
-      width: 780px;
-      height: 780px;
-      animation: floatA 8s ease-in-out infinite;
+      top: -120px;
+      left: -180px;
+      width: 520px;
+      height: 520px;
+      opacity: 0.55;
+      animation: floatA 10s ease-in-out infinite;
     }
 
     .art-left {
-      top: 380px;
-      left: -160px;
-      width: 360px;
-      height: 520px;
-      animation: floatB 7s ease-in-out infinite;
+      display: none;
     }
 
     .art-bottom {
-      bottom: -180px;
-      left: -40px;
-      width: 720px;
-      height: 520px;
-      animation: floatA 9s ease-in-out infinite reverse;
+      bottom: -160px;
+      left: -80px;
+      width: 480px;
+      height: 360px;
+      opacity: 0.5;
+      animation: floatA 12s ease-in-out infinite reverse;
     }
 
     .content {
       position: relative;
       z-index: 2;
-      padding: 44px 56px 40px;
+      padding: 48px 72px 40px;
       height: 100%;
       display: flex;
       flex-direction: column;
     }
 
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 18px;
+      margin-bottom: 28px;
+      border-bottom: 1.5px solid #D9C6EF;
+      animation: rise 0.6s ease both;
+    }
+
     .logo-pill {
-      align-self: flex-start;
       background: #fff;
       border: 1px solid #D9C6EF;
-      border-radius: 12px;
+      border-radius: 10px;
       padding: 8px 12px;
-      margin-bottom: 28px;
-      animation: rise 0.7s ease both;
     }
 
     .logo-pill img {
-      height: 38px;
+      height: 40px;
       display: block;
+    }
+
+    .header-text {
+      text-align: left;
+    }
+
+    .header-text strong {
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .header-text span {
+      display: block;
+      margin-top: 2px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #6B4C9A;
+    }
+
+    .kicker {
+      font-size: 16px;
+      font-weight: 700;
+      color: #6B4C9A;
+      margin-bottom: 10px;
+      animation: rise 0.65s ease 0.06s both;
     }
 
     h1 {
       font-weight: 900;
-      font-size: 62px;
-      line-height: 1.12;
-      max-width: 640px;
-      margin-bottom: 18px;
-      animation: rise 0.75s ease 0.08s both;
+      font-size: 52px;
+      line-height: 1.22;
+      margin-bottom: 22px;
+      animation: rise 0.7s ease 0.1s both;
     }
 
     .intro {
       font-size: 20px;
       font-weight: 400;
-      line-height: 1.75;
-      max-width: 680px;
+      line-height: 1.8;
       color: #3A2454;
-      margin-bottom: 22px;
-      padding: 18px 22px;
+      margin-bottom: 28px;
+      padding: 20px 24px;
       background: #FFFFFF;
       border: 1.5px solid #D9C6EF;
-      border-radius: 20px;
-      animation: rise 0.75s ease 0.16s both;
+      border-radius: 16px;
+      animation: rise 0.7s ease 0.16s both;
     }
 
     .section-label {
-      font-size: 18px;
-      font-weight: 900;
-      margin-bottom: 12px;
-      animation: rise 0.7s ease 0.22s both;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      animation: rise 0.65s ease 0.2s both;
+    }
+
+    .section-label::after {
+      content: "";
+      flex: 1;
+      height: 1.5px;
+      background: #C4A35A;
     }
 
     .cards {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      max-width: 720px;
+      gap: 12px;
       flex: 1;
     }
 
@@ -156,99 +194,74 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      padding: 12px 16px;
+      min-height: 88px;
+      padding: 14px 18px;
       background: #FFFFFF;
       border: 1.5px solid #D9C6EF;
-      border-radius: 18px;
-      animation: rise 0.7s ease both;
+      border-radius: 14px;
+      animation: rise 0.65s ease both;
     }
 
-    .card:nth-child(1) { animation-delay: 0.28s; }
-    .card:nth-child(2) { animation-delay: 0.36s; }
-    .card:nth-child(3) { animation-delay: 0.44s; }
-    .card:nth-child(4) { animation-delay: 0.52s; }
-    .card:nth-child(5) { animation-delay: 0.6s; }
+    .card:nth-child(1) { animation-delay: 0.24s; }
+    .card:nth-child(2) { animation-delay: 0.3s; }
+    .card:nth-child(3) { animation-delay: 0.36s; }
+    .card:nth-child(4) { animation-delay: 0.42s; }
+    .card:nth-child(5) { animation-delay: 0.48s; }
+
+    .num {
+      flex: 0 0 36px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #C4A35A;
+      letter-spacing: 0.04em;
+    }
 
     .icon {
-      flex: 0 0 52px;
-      width: 52px;
-      height: 52px;
-      border-radius: 16px;
+      flex: 0 0 48px;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
       background: #EDE3F7;
       color: #6B4C9A;
       display: flex;
       align-items: center;
       justify-content: center;
-      animation: bob 2.8s ease-in-out infinite;
     }
 
-    .card:nth-child(2) .icon { animation-delay: 0.3s; }
-    .card:nth-child(3) .icon { animation-delay: 0.6s; }
-    .card:nth-child(4) .icon { animation-delay: 0.9s; }
-    .card:nth-child(5) .icon { animation-delay: 1.2s; }
-
     .icon svg {
-      width: 26px;
-      height: 26px;
+      width: 24px;
+      height: 24px;
     }
 
     .card p {
+      flex: 1;
       font-size: 19px;
       font-weight: 500;
       line-height: 1.55;
       color: #3A2454;
     }
 
-    .cta {
-      margin-top: 18px;
-      align-self: flex-start;
-      display: inline-flex;
+    .footer {
+      display: flex;
       align-items: center;
-      gap: 12px;
-      background: #C9B3E4;
-      color: #3A2454;
-      border-radius: 999px;
-      padding: 14px 28px 14px 22px;
-      font-size: 20px;
+      justify-content: space-between;
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1.5px solid #D9C6EF;
+      font-size: 16px;
       font-weight: 700;
-      z-index: 3;
-      animation: rise 0.7s ease 0.7s both, pulse 2.4s ease-in-out 1.4s infinite;
-    }
-
-    .cta svg {
-      width: 18px;
-      height: 18px;
-      animation: nudge 1.6s ease-in-out infinite;
+      color: #6B4C9A;
+      animation: rise 0.6s ease 0.55s both;
     }
 
     @keyframes rise {
-      from { opacity: 0; transform: translateY(18px); }
+      from { opacity: 0; transform: translateY(12px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes floatA {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      50% { transform: translate(10px, -14px) rotate(1.4deg); }
-    }
-
-    @keyframes floatB {
       0%, 100% { transform: translate(0, 0); }
-      50% { transform: translate(-12px, 10px); }
-    }
-
-    @keyframes bob {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-3px); }
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.035); }
-    }
-
-    @keyframes nudge {
-      0%, 100% { transform: translate(0, 0); }
-      50% { transform: translate(3px, -3px); }
+      50% { transform: translate(6px, -8px); }
     }
   </style>
 </head>
@@ -339,11 +352,18 @@
     </svg>
 
     <div class="content">
-      <div class="logo-pill">
-        <img src="logo.svg" alt="جامعة تبوك" />
-      </div>
+      <header class="header">
+        <div class="logo-pill">
+          <img src="logo.svg" alt="جامعة تبوك" />
+        </div>
+        <div class="header-text">
+          <strong>جامعة تبوك</strong>
+          <span>University of Tabuk</span>
+        </div>
+      </header>
 
-      <h1>تمَيُّزك...<br>له امتيازات</h1>
+      <p class="kicker">امتيازات الطالب المتميز</p>
+      <h1>تمَيُّزك... له امتيازات</h1>
 
       <p class="intro">
         لأن التميز يستحق التقدير .. يحصل الطالب المتميز في جامعة تبوك على مجموعة من الامتيازات والفرص التي تدعم تطوره الأكاديمي والشخصي، وتمنحه تجربة جامعية أكثر إثراءً.
@@ -352,6 +372,7 @@
       <div class="section-label">الامتيازات</div>
       <div class="cards">
         <article class="card">
+          <span class="num">01</span>
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="8" r="5" />
@@ -362,6 +383,7 @@
         </article>
 
         <article class="card">
+          <span class="num">02</span>
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M9 18h6" />
@@ -373,6 +395,7 @@
         </article>
 
         <article class="card">
+          <span class="num">03</span>
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 7h10v11H7z" />
@@ -384,6 +407,7 @@
         </article>
 
         <article class="card">
+          <span class="num">04</span>
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="9" />
@@ -395,6 +419,7 @@
         </article>
 
         <article class="card">
+          <span class="num">05</span>
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 4h10v4a5 5 0 0 1-10 0V4Z" />
@@ -408,13 +433,10 @@
         </article>
       </div>
 
-      <div class="cta">
-        جامعة تبوك
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M7 17 17 7" />
-          <path d="M8 7h9v9" />
-        </svg>
-      </div>
+      <footer class="footer">
+        <span>جامعة تبوك</span>
+        <span>University of Tabuk</span>
+      </footer>
     </div>
   </article>
 </body>
