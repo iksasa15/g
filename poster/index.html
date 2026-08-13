@@ -71,6 +71,7 @@
       left: -170px;
       width: 780px;
       height: 780px;
+      animation: floatA 8s ease-in-out infinite;
     }
 
     .art-left {
@@ -78,6 +79,7 @@
       left: -160px;
       width: 360px;
       height: 520px;
+      animation: floatB 7s ease-in-out infinite;
     }
 
     .art-bottom {
@@ -85,12 +87,13 @@
       left: -40px;
       width: 720px;
       height: 520px;
+      animation: floatA 9s ease-in-out infinite reverse;
     }
 
     .content {
       position: relative;
       z-index: 2;
-      padding: 52px 64px 48px;
+      padding: 44px 56px 40px;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -101,54 +104,102 @@
       background: #fff;
       border-radius: 12px;
       padding: 8px 12px;
-      margin-bottom: 42px;
+      margin-bottom: 28px;
+      animation: rise 0.7s ease both;
     }
 
     .logo-pill img {
-      height: 40px;
+      height: 38px;
       display: block;
     }
 
     h1 {
       font-weight: 900;
-      font-size: 76px;
+      font-size: 62px;
       line-height: 1.12;
       max-width: 640px;
-      margin-bottom: 26px;
+      margin-bottom: 18px;
+      animation: rise 0.75s ease 0.08s both;
     }
 
     .intro {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 400;
-      line-height: 1.85;
-      max-width: 640px;
-      color: rgba(255, 255, 255, 0.94);
-      margin-bottom: 52px;
+      line-height: 1.75;
+      max-width: 680px;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 22px;
+      padding: 18px 22px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1.5px solid rgba(255, 255, 255, 0.28);
+      border-radius: 20px;
+      animation: rise 0.75s ease 0.16s both;
     }
 
     .section-label {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 900;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
+      animation: rise 0.7s ease 0.22s both;
     }
 
-    .cols {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px 56px;
-      max-width: 700px;
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 720px;
+      flex: 1;
     }
 
-    .cols p {
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 1.8;
-      color: rgba(255, 255, 255, 0.92);
-      margin-bottom: 22px;
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1.5px solid rgba(255, 255, 255, 0.26);
+      border-radius: 18px;
+      animation: rise 0.7s ease both;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.28s; }
+    .card:nth-child(2) { animation-delay: 0.36s; }
+    .card:nth-child(3) { animation-delay: 0.44s; }
+    .card:nth-child(4) { animation-delay: 0.52s; }
+    .card:nth-child(5) { animation-delay: 0.6s; }
+
+    .icon {
+      flex: 0 0 52px;
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: #e4d4f4;
+      color: #4e2460;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: bob 2.8s ease-in-out infinite;
+    }
+
+    .card:nth-child(2) .icon { animation-delay: 0.3s; }
+    .card:nth-child(3) .icon { animation-delay: 0.6s; }
+    .card:nth-child(4) .icon { animation-delay: 0.9s; }
+    .card:nth-child(5) .icon { animation-delay: 1.2s; }
+
+    .icon svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .card p {
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.55;
+      color: #fff;
     }
 
     .cta {
-      margin-top: auto;
+      margin-top: 18px;
       align-self: flex-start;
       display: inline-flex;
       align-items: center;
@@ -156,15 +207,47 @@
       background: #e4d4f4;
       color: #3a1848;
       border-radius: 999px;
-      padding: 16px 30px 16px 24px;
-      font-size: 22px;
+      padding: 14px 28px 14px 22px;
+      font-size: 20px;
       font-weight: 700;
       z-index: 3;
+      animation: rise 0.7s ease 0.7s both, pulse 2.4s ease-in-out 1.4s infinite;
     }
 
     .cta svg {
       width: 18px;
       height: 18px;
+      animation: nudge 1.6s ease-in-out infinite;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatA {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50% { transform: translate(10px, -14px) rotate(1.4deg); }
+    }
+
+    @keyframes floatB {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(-12px, 10px); }
+    }
+
+    @keyframes bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.035); }
+    }
+
+    @keyframes nudge {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(3px, -3px); }
     }
   </style>
 </head>
@@ -215,8 +298,6 @@
         <circle cx="78" cy="320" r="3.8" />
         <circle cx="140" cy="400" r="5" />
         <circle cx="470" cy="380" r="4.6" />
-        <circle cx="220" cy="70" r="3.4" />
-        <circle cx="340" cy="58" r="3.8" />
       </g>
     </svg>
 
@@ -226,30 +307,12 @@
       <path d="M-40 210 C90 130 200 180 250 290 C160 220 50 260 -40 210Z" fill="#e4d4f4" />
       <path d="M10 300 C130 230 210 280 240 380 C150 320 50 350 10 300Z" fill="#8fb86a" />
       <path d="M-10 390 C100 340 170 390 190 470 C110 420 30 450 -10 390Z" fill="#b48fd4" />
-      <g fill="#fff8ee" opacity="0.65">
-        <circle cx="80" cy="70" r="4" />
-        <circle cx="130" cy="50" r="3" />
-        <circle cx="70" cy="150" r="3.5" />
-        <circle cx="150" cy="130" r="2.8" />
-        <circle cx="40" cy="230" r="3.2" />
-        <circle cx="120" cy="250" r="2.6" />
-      </g>
     </svg>
 
     <svg class="art art-bottom" viewBox="0 0 720 520" aria-hidden="true">
       <path d="M40 360 C10 180 160 70 320 80 C250 180 280 300 360 400 C180 380 80 430 40 360Z" fill="#9dca78" />
       <path d="M160 450 C110 250 280 110 450 130 C380 250 440 350 530 450 C340 430 210 500 160 450Z" fill="#d7b8ee" />
       <path d="M330 500 C300 330 460 210 620 230 C560 340 610 430 680 510 C500 490 380 530 330 500Z" fill="#b48fd4" />
-      <g fill="#fff8ee" opacity="0.5">
-        <circle cx="220" cy="200" r="5" />
-        <circle cx="280" cy="160" r="3.5" />
-        <circle cx="190" cy="260" r="4" />
-        <circle cx="340" cy="220" r="3" />
-        <circle cx="400" cy="280" r="4.2" />
-        <circle cx="250" cy="320" r="3.2" />
-        <circle cx="460" cy="320" r="3.6" />
-        <circle cx="140" cy="300" r="2.8" />
-      </g>
       <g transform="translate(20 40) rotate(-12)">
         <path d="M40 300 C38 190 46 110 40 18" stroke="#7ea35c" stroke-width="8" fill="none" stroke-linecap="round" />
         <g fill="#e4d4f4">
@@ -260,8 +323,6 @@
           <ellipse cx="60" cy="80" rx="11" ry="17" transform="rotate(38 60 80)" />
           <ellipse cx="22" cy="110" rx="10" ry="16" transform="rotate(-30 22 110)" />
           <ellipse cx="58" cy="112" rx="10" ry="16" transform="rotate(28 58 112)" />
-          <ellipse cx="24" cy="142" rx="9" ry="14" transform="rotate(-26 24 142)" />
-          <ellipse cx="56" cy="144" rx="9" ry="14" transform="rotate(24 56 144)" />
         </g>
       </g>
       <g transform="translate(110 90) rotate(16)">
@@ -272,8 +333,6 @@
           <ellipse cx="48" cy="40" rx="9" ry="14" transform="rotate(30 48 40)" />
           <ellipse cx="14" cy="66" rx="9" ry="14" transform="rotate(-38 14 66)" />
           <ellipse cx="50" cy="68" rx="9" ry="14" transform="rotate(36 50 68)" />
-          <ellipse cx="16" cy="94" rx="8" ry="13" transform="rotate(-28 16 94)" />
-          <ellipse cx="48" cy="96" rx="8" ry="13" transform="rotate(26 48 96)" />
         </g>
       </g>
     </svg>
@@ -290,16 +349,62 @@
       </p>
 
       <div class="section-label">الامتيازات</div>
-      <div class="cols">
-        <div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="5" />
+              <path d="M8.5 12.5 7 21l5-2.2L17 21l-1.5-8.5" />
+            </svg>
+          </div>
           <p>دعم الطلاب المميزين في المسابقات والترشيحات النهائية.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18h6" />
+              <path d="M10 21h4" />
+              <path d="M12 3a6 6 0 0 0-3.5 10.8c.9.7 1.5 1.7 1.5 2.7h4c0-1 .6-2 1.5-2.7A6 6 0 0 0 12 3Z" />
+            </svg>
+          </div>
           <p>حاضنة ابتكار لتمويل مشاريع وأبحاث طلابنا المميزين.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 7h10v11H7z" />
+              <path d="M9 7V5.8A2.8 2.8 0 0 1 12 3a2.8 2.8 0 0 1 3 2.8V7" />
+              <path d="M9.5 12h5M9.5 15.5h3.5" />
+            </svg>
+          </div>
           <p>دعم طلابنا المميزين في شهادات احترافية من مركز محترف.</p>
-        </div>
-        <div>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18" />
+              <path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z" />
+            </svg>
+          </div>
           <p>دعم الطلاب المميزين في المشاركات الخارجية وتمثيل الجامعة.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 4h10v4a5 5 0 0 1-10 0V4Z" />
+              <path d="M12 13v3" />
+              <path d="M8 20h8" />
+              <path d="M6 8H4a3 3 0 0 0 3 3" />
+              <path d="M18 8h2a3 3 0 0 1-3 3" />
+            </svg>
+          </div>
           <p>البطولات والمنافسات الرياضية الجامعية والإلكترونية في الاتحاد السعودي للرياضة الجامعية.</p>
-        </div>
+        </article>
       </div>
 
       <div class="cta">

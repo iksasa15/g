@@ -20,7 +20,7 @@ await page.goto(html, { waitUntil: "networkidle" });
 await page.evaluate(async () => {
   await document.fonts.ready;
 });
-await page.waitForTimeout(400);
+await page.waitForTimeout(1600);
 await page.locator("#poster").screenshot({ path: out, type: "png" });
 await browser.close();
 console.log(`Exported ${out}`);
