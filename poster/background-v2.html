@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=793" />
+  <title>خلفية خزامى — نسخة 2</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 793px;
+      height: 869px;
+      overflow: hidden;
+      background: #111;
+    }
+    .poster {
+      position: relative;
+      width: 793px;
+      height: 869px;
+      background: #EAF2E8;
+      overflow: hidden;
+    }
+    .art {
+      position: absolute;
+      pointer-events: none;
+    }
+    .art-flower {
+      top: -100px;
+      right: -110px;
+      width: 520px;
+      height: 520px;
+    }
+    .art-side {
+      top: 300px;
+      right: -100px;
+      width: 220px;
+      height: 300px;
+      transform: scaleX(-1);
+    }
+    .art-bottom {
+      bottom: -110px;
+      right: -20px;
+      width: 460px;
+      height: 340px;
+      transform: scaleX(-1);
+    }
+  </style>
+</head>
+<body>
+  <article class="poster" id="poster">
+    <!-- Flower matching reference: lavender petals, green ovals, scalloped ring, white, gold -->
+    <svg class="art art-flower" viewBox="0 0 780 780" aria-hidden="true">
+      <!-- Outer lavender petals -->
+      <g fill="#C9B8E0">
+        <ellipse cx="300" cy="72" rx="52" ry="122" />
+        <ellipse cx="300" cy="72" rx="52" ry="122" transform="rotate(22.5 300 300)" />
+        <ellipse cx="300" cy="72" rx="52" ry="122" transform="rotate(45 300 300)" />
+        <ellipse cx="300" cy="72" rx="52" ry="122" transform="rotate(67.5 300 300)" />
+        <ellipse cx="300" cy="72" rx="52" ry="122" transform="rotate(90 300 300)" />
+        <ellipse cx="300" cy="72" rx="52" ry="122" transform="rotate(112.5 300 300)" />
+        <ellipse cx="300" cy="72" rx="52" ry="122" transform="rotate(135 300 300)" />
+        <ellipse cx="300" cy="72" rx="52" ry="122" transform="rotate(157.5 300 300)" />
+        <ellipse cx="300" cy="72" rx="52" ry="122" transform="rotate(180 300 300)" />
+        <ellipse cx="300" cy="72" rx="52" ry="122" transform="rotate(202.5 300 300)" />
+        <ellipse cx="300" cy="72" rx="52" ry="122" transform="rotate(225 300 300)" />
+        <ellipse cx="300" cy="72" rx="52" ry="122" transform="rotate(247.5 300 300)" />
+        <ellipse cx="300" cy="72" rx="52" ry="122" transform="rotate(270 300 300)" />
+        <ellipse cx="300" cy="72" rx="52" ry="122" transform="rotate(292.5 300 300)" />
+        <ellipse cx="300" cy="72" rx="52" ry="122" transform="rotate(315 300 300)" />
+        <ellipse cx="300" cy="72" rx="52" ry="122" transform="rotate(337.5 300 300)" />
+      </g>
+
+      <!-- Sage green oval petals -->
+      <g fill="#7FA06E">
+        <ellipse cx="300" cy="130" rx="26" ry="70" transform="rotate(11 300 300)" />
+        <ellipse cx="300" cy="130" rx="26" ry="70" transform="rotate(56 300 300)" />
+        <ellipse cx="300" cy="130" rx="26" ry="70" transform="rotate(101 300 300)" />
+        <ellipse cx="300" cy="130" rx="26" ry="70" transform="rotate(146 300 300)" />
+        <ellipse cx="300" cy="130" rx="26" ry="70" transform="rotate(191 300 300)" />
+        <ellipse cx="300" cy="130" rx="26" ry="70" transform="rotate(236 300 300)" />
+        <ellipse cx="300" cy="130" rx="26" ry="70" transform="rotate(281 300 300)" />
+        <ellipse cx="300" cy="130" rx="26" ry="70" transform="rotate(326 300 300)" />
+      </g>
+
+      <!-- Light green scalloped / jagged ring -->
+      <path
+        fill="#B7D39A"
+        d="M300 188
+           L318 210 L348 200 L352 230 L382 236 L372 266 L398 286 L372 306 L382 336 L352 342 L348 372 L318 362 L300 384
+           L282 362 L252 372 L248 342 L218 336 L228 306 L202 286 L228 266 L218 236 L248 230 L252 200 L282 210 Z"
+      />
+
+      <!-- White ring + gold center -->
+      <circle cx="300" cy="300" r="72" fill="#FFFFFF" />
+      <circle cx="300" cy="300" r="48" fill="#C4A35A" />
+    </svg>
+
+    <svg class="art art-side" viewBox="0 0 360 520" aria-hidden="true">
+      <path d="M40 40 C150 -10 250 50 300 130 C230 70 130 90 40 40Z" fill="#7FA06E" />
+      <path d="M0 120 C110 50 210 90 260 180 C180 120 80 150 0 120Z" fill="#C9B8E0" />
+      <path d="M-20 220 C90 150 180 190 220 280 C140 220 50 250 -20 220Z" fill="#B7D39A" />
+      <path d="M20 320 C120 260 190 300 210 380 C130 330 50 350 20 320Z" fill="#9B7EC8" />
+    </svg>
+
+    <svg class="art art-bottom" viewBox="0 0 720 520" aria-hidden="true">
+      <path d="M50 370 C20 200 160 90 300 100 C240 200 270 310 340 400 C180 380 90 430 50 370Z" fill="#7FA06E" />
+      <path d="M170 450 C130 270 270 140 420 150 C360 260 410 350 500 450 C330 430 220 500 170 450Z" fill="#C9B8E0" />
+      <path d="M320 500 C300 340 440 230 580 250 C530 350 570 430 650 510 C480 490 360 530 320 500Z" fill="#9B7EC8" />
+      <g transform="translate(30 50) rotate(-14)">
+        <path d="M40 280 C38 180 44 100 40 16" stroke="#6A9458" stroke-width="7" fill="none" stroke-linecap="round" />
+        <g fill="#C9B8E0">
+          <ellipse cx="40" cy="20" rx="11" ry="18" />
+          <ellipse cx="24" cy="42" rx="9" ry="14" transform="rotate(-34 24 42)" />
+          <ellipse cx="56" cy="44" rx="9" ry="14" transform="rotate(32 56 44)" />
+          <ellipse cx="22" cy="70" rx="9" ry="14" transform="rotate(-40 22 70)" />
+          <ellipse cx="58" cy="72" rx="9" ry="14" transform="rotate(38 58 72)" />
+          <ellipse cx="24" cy="98" rx="8" ry="13" transform="rotate(-30 24 98)" />
+          <ellipse cx="56" cy="100" rx="8" ry="13" transform="rotate(28 56 100)" />
+        </g>
+      </g>
+      <g transform="translate(115 95) rotate(18)">
+        <path d="M30 230 C28 150 34 85 30 12" stroke="#7FA06E" stroke-width="6" fill="none" stroke-linecap="round" />
+        <g fill="#B8A0D4">
+          <ellipse cx="30" cy="14" rx="10" ry="16" />
+          <ellipse cx="16" cy="34" rx="8" ry="13" transform="rotate(-32 16 34)" />
+          <ellipse cx="44" cy="36" rx="8" ry="13" transform="rotate(30 44 36)" />
+          <ellipse cx="14" cy="60" rx="8" ry="13" transform="rotate(-38 14 60)" />
+          <ellipse cx="46" cy="62" rx="8" ry="13" transform="rotate(36 46 62)" />
+        </g>
+      </g>
+    </svg>
+  </article>
+</body>
+</html>
