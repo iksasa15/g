@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=1080" />
+  <meta name="viewport" content="width=793" />
   <title>بوصلة UT — الطبعة الأولى</title>
   <style>
     @font-face {
@@ -44,16 +44,16 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     html, body {
-      width: 1080px;
-      height: 1350px;
+      width: 793px;
+      height: 869px;
       overflow: hidden;
       background: #111;
     }
 
     .poster {
       position: relative;
-      width: 1080px;
-      height: 1350px;
+      width: 793px;
+      height: 869px;
       background: #F6F0FA;
       color: #3A2454;
       font-family: "Thmanyah Sans", sans-serif;
@@ -63,63 +63,36 @@
     .art { position: absolute; pointer-events: none; z-index: 1; }
 
     .art-flower {
-      top: -140px;
-      left: -160px;
-      width: 680px;
-      height: 680px;
+      top: -100px;
+      left: -110px;
+      width: 460px;
+      height: 460px;
       opacity: 0.75;
     }
 
     .art-left {
-      top: 420px;
-      left: -140px;
-      width: 340px;
-      height: 480px;
+      top: 280px;
+      left: -100px;
+      width: 240px;
+      height: 340px;
       opacity: 0.7;
     }
 
     .art-bottom {
-      bottom: -140px;
-      left: -60px;
-      width: 640px;
-      height: 440px;
+      bottom: -100px;
+      left: -40px;
+      width: 460px;
+      height: 320px;
       opacity: 0.7;
     }
 
     .content {
       position: relative;
       z-index: 2;
-      padding: 48px 64px 40px;
+      padding: 28px 40px 24px;
       height: 100%;
       display: flex;
       flex-direction: column;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-bottom: 16px;
-      border-bottom: 1.5px solid #D9C6EF;
-    }
-
-    .logo-pill {
-      background: #fff;
-      border: 1px solid #D9C6EF;
-      border-radius: 10px;
-      padding: 8px 12px;
-    }
-
-    .logo-pill img { height: 40px; display: block; }
-
-    .header-text { text-align: left; }
-    .header-text strong { display: block; font-size: 20px; font-weight: 700; }
-    .header-text span {
-      display: block;
-      margin-top: 2px;
-      font-size: 13px;
-      font-weight: 500;
-      color: #6B4C9A;
     }
 
     .hero {
@@ -129,29 +102,29 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      gap: 22px;
+      gap: 14px;
     }
 
     .edition {
       display: inline-flex;
       align-items: center;
-      padding: 8px 22px;
+      padding: 6px 16px;
       background: #FFFFFF;
       border: 1.5px solid #C4A35A;
       border-radius: 999px;
-      font-size: 18px;
+      font-size: 14px;
       font-weight: 700;
       color: #8A6B24;
     }
 
     .compass {
-      width: 280px;
-      height: 280px;
+      width: 190px;
+      height: 190px;
     }
 
     h1 {
       font-weight: 900;
-      font-size: 96px;
+      font-size: 68px;
       line-height: 1.05;
       letter-spacing: -0.02em;
     }
@@ -159,35 +132,24 @@
     h1 em {
       font-style: normal;
       color: #6B4C9A;
-      font-size: 64px;
+      font-size: 44px;
       display: block;
-      margin-top: 4px;
+      margin-top: 2px;
       font-weight: 900;
       letter-spacing: 0.08em;
     }
 
     .date {
-      font-size: 28px;
+      font-size: 20px;
       font-weight: 700;
       color: #6B4C9A;
     }
 
     .rule {
-      width: 120px;
-      height: 3px;
+      width: 88px;
+      height: 2.5px;
       background: #C4A35A;
       border-radius: 2px;
-    }
-
-    .footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 16px;
-      border-top: 1.5px solid #D9C6EF;
-      font-size: 16px;
-      font-weight: 700;
-      color: #6B4C9A;
     }
   </style>
 </head>
@@ -242,16 +204,6 @@
     </svg>
 
     <div class="content">
-      <header class="header">
-        <div class="logo-pill">
-          <img src="logo.svg" alt="جامعة تبوك" />
-        </div>
-        <div class="header-text">
-          <strong>جامعة تبوك</strong>
-          <span>University of Tabuk</span>
-        </div>
-      </header>
-
       <div class="hero">
         <div class="edition">الطبعة الأولى</div>
 
@@ -275,11 +227,6 @@
         <div class="rule"></div>
         <p class="date">Aug. 23, 2026</p>
       </div>
-
-      <footer class="footer">
-        <span>جامعة تبوك</span>
-        <span>University of Tabuk</span>
-      </footer>
     </div>
   </article>
 </body>
